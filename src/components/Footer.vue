@@ -17,7 +17,7 @@
     <v-divider></v-divider>
 
     <div>
-      {{ new Date().getFullYear() }} — <strong>Accurx</strong>
+      {{ new Date().getFullYear() }} — <strong>Geenux</strong>
     </div>
   </v-footer>
 </template>

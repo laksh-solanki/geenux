@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <router-link class="navbar-brand" to="/">Accurx</router-link>
+      <router-link class="navbar-brand" to="/">Geenux</router-link>
       <button
         class="navbar-toggler"
         type="button"
@@ -125,6 +125,6 @@ input:hover {
   font-weight: 700;
   color: #fff;
   border-bottom-right-radius: 8px;
-  border-top-right-radius: 8px; 
+  border-top-right-radius: 8px;
 }
 </style>
