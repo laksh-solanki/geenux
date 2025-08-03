@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '@Home.vue'
-import About from '@About.vue'
-import Contact from '@Contact.vue'
-import Services from '@Services.vue'
+import Home from '../views/Home.vue'
+import About from '../views/About.vue'
+import Contact from '../views/Contact.vue'
+import Services from '../views/Services.vue'
 // Add more views as needed
 
 const routes = [
