@@ -8,6 +8,7 @@ import Footer from './components/Footer.vue'
   <Navbar />
   <RouterView />
   <Footer />
+  <v-btn color="primary">Test Button</v-btn>
 </template>
 
 <style scoped></style>

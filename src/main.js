@@ -10,8 +10,8 @@ import App from './App.vue'
 import router from './router'
 // Vuetify imports
 import { createVuetify } from 'vuetify'
-import '@mdi/font/css/materialdesignicons.css'
 import 'vuetify/styles'
+import '@mdi/font/css/materialdesignicons.css'
 
 const vuetify = createVuetify({
   icons: {
