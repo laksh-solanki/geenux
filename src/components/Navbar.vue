@@ -1,11 +1,14 @@
 <template>
-  <v-app-bar color="indigo-darken-4" dark flat app>
-    <v-container class="d-flex align-center justify-space-between">
-      <router-link class="navbar-brand" to="/">Geenux</router-link>
-      <v-row class="align-center" no-gutters>
-        <v-btn v-for="item in navItems" :key="item.text" :to="item.to" variant="text" class="nav-link">
-          {{ item.text }}
-        </v-btn>
+  <v-app-bar app color="indigo-darken-4" dark>
+    <v-container class="d-flex align-center">
+      <v-toolbar-title>
+        <router-link class="navbar-brand" to="/">Geenux</router-link>
+      </v-toolbar-title>
+      <v-spacer></v-spacer>
+      <div class="d-none d-md-flex">
+        <v-tabs>
+          <v-tab v-for="item in navItems" :key="item.text" :to="item.to">{{ item.text }}</v-tab>
+        </v-tabs>
         <div class="group ml-4">
           <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
             <g>
@@ -14,12 +17,34 @@
               </path>
             </g>
           </svg>
-          <input placeholder="Search" type="search" id="search" class="input" />
+          <input placeholder="Search" type="search" class="form-control input" />
           <button class="subbtn" type="submit">Search</button>
         </div>
-      </v-row>
+      </div>
+      <v-app-bar-nav-icon class="d-md-none" @click="drawer = !drawer"></v-app-bar-nav-icon>
     </v-container>
   </v-app-bar>
+
+  <v-navigation-drawer v-model="drawer" app temporary right>
+    <v-list>
+      <v-list-item>
+        <div class="group">
+          <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+            <g>
+              <path
+                d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
+              </path>
+            </g>
+          </svg>
+          <input placeholder="Search" type="search" class="input form-control" />
+          <button class="subbtn" type="submit">Search</button>
+        </div>
+      </v-list-item>
+      <v-list-item v-for="item in navItems" :key="item.text" :to="item.to">
+        <v-list-item-title>{{ item.text }}</v-list-item-title>
+      </v-list-item>
+    </v-list>
+  </v-navigation-drawer>
 </template>
 
 <script>
@@ -27,6 +52,7 @@ export default {
   name: "AppNavbar",
   data() {
     return {
+      drawer: false,
       navItems: [
         { text: "Home", to: "/" },
         { text: "About", to: "/about" },
@@ -34,6 +60,18 @@ export default {
         { text: "Contact", to: "/contact" },
       ],
     };
+  },
+  computed: {
+    isMobile() {
+      return this.$vuetify.display.mdAndDown;
+    },
+  },
+  watch: {
+    isMobile(newVal) {
+      if (!newVal) {
+        this.drawer = false;
+      }
+    },
   },
 };
 </script>
@@ -72,13 +110,15 @@ export default {
 
 .input {
   width: 100%;
-  height: 100%;
+  height: 69% !important;
   font-size: 14px;
-  padding: 0 1rem;
   padding-left: 2.5rem;
   border: 2px solid transparent;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px !important;
+  border-bottom-left-radius: 8px !important;
+  border-right: none;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
   outline: none;
   background-color: #000000;
   color: #ffffff;
@@ -90,7 +130,7 @@ export default {
 }
 
 .input:focus,
-input:hover {
+.input:hover {
   outline: none;
   border-color: rgba(234, 76, 137, 0.4);
   background-color: #000000;

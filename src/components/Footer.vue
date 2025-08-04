@@ -4,7 +4,7 @@
       <v-btn v-for="icon in icons" :key="icon" :icon="icon" density="comfortable" variant="text"></v-btn>
     </div>
 
-    <v-divider class="my-2" thickness="2" width="50"></v-divider>
+    <v-divider thickness="2" width="50"></v-divider>
 
     <div class="text-caption font-weight-regular opacity-60">
       Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet. Mauris cursus commodo interdum. Praesent ut

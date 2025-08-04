@@ -5,10 +5,13 @@ import Footer from './components/Footer.vue'
 </script>
 
 <template>
-  <Navbar />
-  <RouterView />
-  <Footer />
-  <v-btn color="primary">Test Button</v-btn>
+  <v-app theme="dark">
+    <Navbar />
+    <v-main>
+      <RouterView />
+    </v-main>
+    <Footer />
+  </v-app>
 </template>
 
 <style scoped></style>

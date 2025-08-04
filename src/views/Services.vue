@@ -21,7 +21,7 @@ export default {
         {
           id: 3,
           title: "UI/UX Design",
-          description: "We design beautiful and intuitive user interfaces.",
+          description: "We design beautiful and intuitive user interfaces kkikdied.",
           icon: "bi bi-palette",
         },
       ],
@@ -31,8 +31,8 @@ export default {
 </script>
 
 <template>
-  <div class="services-page">
-    <header class="services-header">
+  <div class="services-page bg-dark">
+    <header class="services-header bg-black">
       <div class="container">
         <h1>Our Services</h1>
         <p class="lead">

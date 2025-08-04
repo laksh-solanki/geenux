@@ -10,7 +10,7 @@ export default {
 </script>
 
 <template>
-  <div class="container-fluid text-white py-5" style="background-color: #000">
+  <div class="container-fluid text-white py-5">
     <!-- Hero Section -->
     <div class="container text-center mb-5">
       <h1 class="display-4 fw-bold">
