@@ -110,7 +110,7 @@ export default {
 
 .input {
   width: 100%;
-  height: 69% !important;
+  height: 100%;
   font-size: 14px;
   padding-left: 2.5rem;
   border: 2px solid transparent;
