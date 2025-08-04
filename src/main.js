@@ -1,7 +1,3 @@
-// Bootstrap imports
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap/dist/js/bootstrap.bundle.min.js'
-import 'bootstrap-icons/font/bootstrap-icons.css'
 // Main CSS import
 import './assets/main.css'
 // Vue, Vue Router imports

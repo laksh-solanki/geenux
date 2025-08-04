@@ -1,75 +1,65 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
+  <v-app-bar color="indigo-darken-4" dark flat app>
+    <v-container class="d-flex align-center justify-space-between">
       <router-link class="navbar-brand" to="/">Geenux</router-link>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav me-auto ms-5 mb-2 mb-lg-0">
-          <li class="nav-item">
-            <router-link class="nav-link" to="/">Home</router-link>
-          </li>
-          <li class="nav-item">
-            <router-link class="nav-link" to="/about">About</router-link>
-          </li>
-          <li class="nav-item">
-            <router-link class="nav-link" to="/services">Services</router-link>
-          </li>
-          <li class="nav-item">
-            <router-link class="nav-link" to="/contact">Contact</router-link>
-          </li>
-        </ul>
-        <form class="d-flex">
-          <div class="group">
-            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
-              <g>
-                <path
-                  d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"
-                ></path>
-              </g>
-            </svg>
-            <input placeholder="Search" type="search" id="search" class="input" />
-            <button class="subbtn" type="submit">Search</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </nav>
+      <v-row class="align-center" no-gutters>
+        <v-btn v-for="item in navItems" :key="item.text" :to="item.to" variant="text" class="nav-link">
+          {{ item.text }}
+        </v-btn>
+        <div class="group ml-4">
+          <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+            <g>
+              <path
+                d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
+              </path>
+            </g>
+          </svg>
+          <input placeholder="Search" type="search" id="search" class="input" />
+          <button class="subbtn" type="submit">Search</button>
+        </div>
+      </v-row>
+    </v-container>
+  </v-app-bar>
 </template>
 
 <script>
 export default {
   name: "AppNavbar",
+  data() {
+    return {
+      navItems: [
+        { text: "Home", to: "/" },
+        { text: "About", to: "/about" },
+        { text: "Services", to: "/services" },
+        { text: "Contact", to: "/contact" },
+      ],
+    };
+  },
 };
 </script>
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
-.navbar{
-  padding: 11.7px 0 11.7px 0 ;
+.navbar-brand {
+  color: #ffffff !important;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  margin-right: 2rem;
 }
 
 .nav-link {
   font-family: "Rubik", sans-serif;
+  color: #fff !important;
+  font-weight: 500;
+  margin-right: 1rem;
+  text-transform: none;
 }
 
 .router-link-active {
-  color: #0d6efd !important; /* Bootstrap primary blue */
-}
-
-.navbar-brand {
-  color: #ffffff !important;
-  font-family: "Rubik", sans-serif;
+  color: #0d6efd !important;
 }
 
 .group {
@@ -83,7 +73,7 @@ export default {
 .input {
   width: 100%;
   height: 100%;
-  font-size:  14px;
+  font-size: 14px;
   padding: 0 1rem;
   padding-left: 2.5rem;
   border: 2px solid transparent;
