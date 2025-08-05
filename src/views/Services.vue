@@ -55,7 +55,25 @@ export default {
       </div>
 
       <div class="text-center mt-5">
-        <a href="/contact" class="btn btn-primary btn-lg">Get in Touch</a>
+        <v-dialog transition="dialog-bottom-transition" width="auto">
+          <template v-slot:activator="{ props: activatorProps }">
+            <v-btn v-bind="activatorProps" text="Get in Touch" block color="blue"></v-btn>
+          </template>
+
+          <template v-slot:default="{ isActive }">
+            <v-card>
+              <v-toolbar title="Opening from the Bottom"></v-toolbar>
+
+              <v-card-text class="text-h2 pa-12">
+                Hello world!
+              </v-card-text>
+
+              <v-card-actions class="justify-end">
+                <v-btn text="Close" @click="isActive.value = false"></v-btn>
+              </v-card-actions>
+            </v-card>
+          </template>
+        </v-dialog>
       </div>
     </main>
   </div>

@@ -5,7 +5,7 @@
         <router-link class="navbar-brand" to="/">Geenux</router-link>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <div class="d-none d-md-flex align-center">
+      <div class="d-none d-md-flex align-center w-75">
         <v-tabs v-model="activeTab" :show-arrows="false" class="w-100">
           <v-tab to="/" value="home">Home</v-tab>
           <v-tab to="/about" value="about">About</v-tab>
@@ -95,9 +95,5 @@ export default {
 
 .router-link-active {
   color: #0d6efd !important;
-}
-
-.v-container{
-  margin-right: 100px;
 }
 </style>

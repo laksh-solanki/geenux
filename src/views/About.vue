@@ -13,7 +13,7 @@ const variants = ["elevated"];
         <v-card :variant="variant" class="mx-auto p-2 " color="surface-variant" max-width="400"
           subtitle="Greyhound divisely hello coldly fonwderfully" title="Headline">
           <template v-slot:actions>
-            <v-btn variant="outlined" rounded="sm" color="white"> Button </v-btn>
+            <v-btn variant="outlined" rounded="lg" color="black"> Button </v-btn>
           </template>
         </v-card>
       </v-col>
@@ -21,7 +21,7 @@ const variants = ["elevated"];
         <v-card :variant="variant" class="mx-auto p-2" color="surface-variant" max-width="400"
           subtitle="Greyhound divisely hello coldly fonwderfully" title="Headline">
           <template v-slot:actions>
-            <v-btn variant="outlined" rounded="sm" color="white"> Button </v-btn>
+            <v-btn variant="outlined" color="black" rounded="lg"> Button </v-btn>
           </template>
         </v-card>
       </v-col>
@@ -29,7 +29,7 @@ const variants = ["elevated"];
         <v-card :variant="variant" class="mx-auto p-2" color="surface-variant" max-width="400"
           subtitle="Greyhound divisely hello coldly fonwderfully" title="Headline">
           <template v-slot:actions>
-            <v-btn variant="outlined" rounded="sm" color="white"> Button </v-btn>
+            <v-btn variant="outlined" rounded="lg" color="black"> Button </v-btn>
           </template>
         </v-card>
       </v-col>
