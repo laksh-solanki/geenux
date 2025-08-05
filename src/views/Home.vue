@@ -19,15 +19,13 @@ export default {
       <p class="lead">
         Discover a wide range of high-quality tiles for every style and budget.
       </p>
-      <router-link to="/contact" class="mt-5 d-flex justify-content-center text-decoration-none"
-        ><button class="button">
+      <router-link to="/contact" class="mt-5 d-flex justify-content-center text-decoration-none"><button
+          class="button">
           Contect Us
           <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
-            <path
-              clip-rule="evenodd"
+            <path clip-rule="evenodd"
               d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
-              fill-rule="evenodd"
-            ></path>
+              fill-rule="evenodd"></path>
           </svg>
         </button>
       </router-link>
@@ -38,25 +36,16 @@ export default {
       <h2 class="text-center mb-4">Our Popular Tile Collections</h2>
       <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
-          <TileCard
-            imageSrc="/Photos/Til-1.jpeg"
-            title="Ceramic Tiles"
-            description="Durable and versatile, perfect for kitchens and bathrooms."
-          />
+          <TileCard imageSrc="/Photos/Til-1.jpeg" title="Ceramic Tiles"
+            description="Durable and versatile, perfect for kitchens and bathrooms." />
         </div>
         <div class="col">
-          <TileCard
-            imageSrc="/Photos/Til-2.avif"
-            title="Porcelain Tiles"
-            description="Highly resistant to moisture and stains, ideal for high-traffic areas."
-          />
+          <TileCard imageSrc="/Photos/Til-2.avif" title="Porcelain Tiles"
+            description="Highly resistant to moisture and stains, ideal for high-traffic areas." />
         </div>
         <div class="col">
-          <TileCard
-            imageSrc="/Photos/Til-3.webp"
-            title="Vinyl Tiles"
-            description="Affordable, comfortable underfoot, and easy to maintain."
-          />
+          <TileCard imageSrc="/Photos/Til-3.webp" title="Vinyl Tiles"
+            description="Affordable, comfortable underfoot, and easy to maintain." />
         </div>
       </div>
     </div>
@@ -129,12 +118,10 @@ export default {
   position: absolute;
   width: 100px;
   height: 100%;
-  background-image: linear-gradient(
-    120deg,
-    rgba(255, 255, 255, 0) 30%,
-    rgba(255, 255, 255, 0.8),
-    rgba(255, 255, 255, 0) 70%
-  );
+  background-image: linear-gradient(120deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0) 70%);
   top: 0;
   left: -100px;
   opacity: 0.6;
