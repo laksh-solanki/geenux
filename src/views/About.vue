@@ -1,37 +1,24 @@
 <script setup>
+import aboutcards from '@/components/aboutcards.vue';
 defineOptions({
-  name: 'AboutPage'
+  name: 'AboutPage',
+  components: {
+    aboutcards,
+  },
 });
-
-const variants = ["elevated"];
 </script>
 
 <template>
   <main class="container">
-    <v-row dense class="pa-4">
-      <v-col v-for="(variant, i) in variants" :key="i" cols="12" md="4">
-        <v-card :variant="variant" class="mx-auto p-2 " color="surface-variant" max-width="400"
-          subtitle="Greyhound divisely hello coldly fonwderfully" title="Headline">
-          <template v-slot:actions>
-            <v-btn variant="outlined" rounded="lg" color="black"> Button </v-btn>
-          </template>
-        </v-card>
+    <v-row dense class="pa-4 my-4 cards">
+      <v-col cols="12" md="4">
+        <aboutcards />
       </v-col>
-      <v-col v-for="(variant, i) in variants" :key="i" cols="12" md="4">
-        <v-card :variant="variant" class="mx-auto p-2" color="surface-variant" max-width="400"
-          subtitle="Greyhound divisely hello coldly fonwderfully" title="Headline">
-          <template v-slot:actions>
-            <v-btn variant="outlined" color="black" rounded="lg"> Button </v-btn>
-          </template>
-        </v-card>
+      <v-col cols="12" md="4">
+        <aboutcards />
       </v-col>
-      <v-col v-for="(variant, i) in variants" :key="i" cols="12" md="4">
-        <v-card :variant="variant" class="mx-auto p-2" color="surface-variant" max-width="400"
-          subtitle="Greyhound divisely hello coldly fonwderfully" title="Headline">
-          <template v-slot:actions>
-            <v-btn variant="outlined" rounded="lg" color="black"> Button </v-btn>
-          </template>
-        </v-card>
+      <v-col cols="12" md="4">
+        <aboutcards />
       </v-col>
     </v-row>
     <v-expansion-panels>
@@ -72,3 +59,7 @@ const variants = ["elevated"];
     </v-expansion-panels>
   </main>
 </template>
+
+<style>
+
+</style>

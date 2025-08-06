@@ -1,9 +1,16 @@
 <template>
-  <div class="card h-100 bg-dark text-white border-secondary">
+  <div 
+    class="card h-100 bg-dark text-white border-secondary"
+    @mouseover="isHovered = true"
+    @mouseleave="isHovered = false"
+  >
     <img :src="imageSrc" class="card-img-top" :alt="title">
     <div class="card-body">
       <h5 class="card-title" @click="copyTitle(title)">{{ title }}</h5>
       <p class="card-text">{{ description }}</p>
+      <transition name="fade">
+        <span v-if="isHovered" class="price-tag">{{ price }}</span>
+      </transition>
       <transition name="fade">
         <span v-if="showCopiedMessage" class="copied-message">Copied!</span>
       </transition>
@@ -26,11 +33,16 @@ export default {
     description: {
       type: String,
       required: true
+    },
+    price: {
+      type: String,
+      required: true
     }
   },
   data() {
     return {
-      showCopiedMessage: false
+      showCopiedMessage: false,
+      isHovered: false
     };
   },
   methods: {
@@ -105,6 +117,18 @@ export default {
 .card:hover .card-title,
 .card:hover .card-text {
   transform: translateY(0);
+}
+
+.price-tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .copied-message {

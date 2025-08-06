@@ -36,16 +36,28 @@ export default {
       <h2 class="text-center mb-4">Our Popular Tile Collections</h2>
       <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
-          <TileCard imageSrc="/Photos/Til-1.jpeg" title="Ceramic Tiles"
-            description="Durable and versatile, perfect for kitchens and bathrooms." />
+          <TileCard 
+            imageSrc="/Photos/Til-1.jpeg" 
+            title="Ceramic Tiles"
+            description="Durable and versatile, perfect for kitchens and bathrooms."
+            price="$2.50/sq ft"
+          />
         </div>
         <div class="col">
-          <TileCard imageSrc="/Photos/Til-2.avif" title="Porcelain Tiles"
-            description="Highly resistant to moisture and stains, ideal for high-traffic areas." />
+          <TileCard 
+            imageSrc="/Photos/Til-2.avif" 
+            title="Porcelain Tiles"
+            description="Highly resistant to moisture and stains, ideal for high-traffic areas."
+            price="$3.00/sq ft"
+          />
         </div>
         <div class="col">
-          <TileCard imageSrc="/Photos/Til-3.webp" title="Vinyl Tiles"
-            description="Affordable, comfortable underfoot, and easy to maintain." />
+          <TileCard 
+            imageSrc="/Photos/Til-3.webp" 
+            title="Vinyl Tiles"
+            description="Affordable, comfortable underfoot, and easy to maintain."
+            price="$1.75/sq ft"
+          />
         </div>
       </div>
     </div>

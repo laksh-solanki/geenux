@@ -1,20 +1,3 @@
-<template>
-  <v-card class="mx-auto" color="surface-light" max-width="400">
-    <v-card-text>
-      <v-text-field
-        :loading="loading"
-        append-inner-icon="mdi-magnify"
-        density="compact"
-        label="Search templates"
-        variant="solo"
-        hide-details
-        single-line
-        @click:append-inner="onClick"
-      ></v-text-field>
-    </v-card-text>
-  </v-card>
-</template>
-
 <script>
 export default {
   name: "SearchBar",
@@ -33,6 +16,23 @@ export default {
   },
 };
 </script>
+
+<template>
+  <v-card class="mx-auto" color="surface-light" max-width="400">
+    <v-card-text>
+      <v-text-field
+        :loading="loading"
+        append-inner-icon="mdi-magnify"
+        density="compact"
+        label="Search templates"
+        variant="solo"
+        hide-details
+        single-line
+        @click:append-inner="onClick"
+      ></v-text-field>
+    </v-card-text>
+  </v-card>
+</template>
 
 <style scoped>
 .v-card {
