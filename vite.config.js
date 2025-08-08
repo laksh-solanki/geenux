@@ -15,4 +15,24 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            if (id.includes('vuetify')) {
+              return 'vuetify'
+            }
+            if (id.includes('bootstrap')) {
+              return 'bootstrap'
+            }
+            if (id.includes('@mdi/font')) {
+              return 'mdi-font'
+            }
+            return 'vendor'
+          }
+        }
+      }
+    }
+  }
 })
